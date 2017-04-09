@@ -39,7 +39,10 @@ src/OS/Programs/gfx_test.d src/OS/Programs/gfx_test.o: \
  ../src/OS/Programs/../Programs/gfx_test.h \
  ../src/OS/Programs/../Programs/../Kernel.h \
  ../src/OS/Programs/../Programs/serial_listener.h \
- ../src/OS/Programs/../Programs/operating_system.h
+ ../src/OS/Programs/../Programs/operating_system.h \
+ ../src/OS/Programs/../Programs/../../GUI/Button.h \
+ ../src/OS/Programs/../Programs/../../GUI/../Tools/Tools.h \
+ ../src/OS/Programs/../Programs/../../GUI/../GraphicsDriver/Display.h
 
 ../src/OS/Programs/gfx_test.h:
 
@@ -126,3 +129,9 @@ d:\programme\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdl
 ../src/OS/Programs/../Programs/serial_listener.h:
 
 ../src/OS/Programs/../Programs/operating_system.h:
+
+../src/OS/Programs/../Programs/../../GUI/Button.h:
+
+../src/OS/Programs/../Programs/../../GUI/../Tools/Tools.h:
+
+../src/OS/Programs/../Programs/../../GUI/../GraphicsDriver/Display.h:

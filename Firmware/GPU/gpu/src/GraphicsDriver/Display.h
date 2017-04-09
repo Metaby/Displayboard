@@ -58,6 +58,6 @@
  static void buffer_flood_fill(uint8_t X, uint8_t Y, uint8_t Color);
  static void buffer_write_int(uint16_t Number, uint8_t X, uint8_t Y);
  static void buffer_invert(uint8_t X, uint8_t Y, uint8_t Width, uint8_t Height);
- static void buffer_draw_button(uint8_t* Text, uint8_t X, uint8_t Y, uint8_t Inverted);
+ void buffer_draw_button(uint8_t* Text, uint8_t X, uint8_t Y, uint8_t Inverted);
  
  #endif

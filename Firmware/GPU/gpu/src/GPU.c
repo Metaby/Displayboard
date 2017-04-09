@@ -16,16 +16,6 @@ int main(void)
 	kernel_run();
 }
 
-ISR(INT2_vect)
-{
-	TIMSK1 = 0x00;
-	TCNT1H = 0xF6;
-	TCNT1L = 0x3B;
-	position = display_get_touch();
-	// Touch erkannt
-	TIMSK1 = (1 << TOIE1);
-}
-
 void hardware_initialize()
 {
 	// Draw-Timer

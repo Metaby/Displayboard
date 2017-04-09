@@ -18,6 +18,7 @@
 
 typedef void (*void_fnct_void) (void);
 typedef int (*int_fnct_void) (void);
+typedef void (*void_fnct_vector_2) (vector_2);
 
 // #define CV2(X,Y)	vector_2 tmp; \
 // 					tmp.x = X;	\

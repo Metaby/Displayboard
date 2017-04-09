@@ -8,11 +8,16 @@
  #include "operating_system.h"
  
  uint8_t operating_system_fnct() {
-	 //Button serialListenerButton = { "Serial-Listener", 5, 5 };
-	 //disp_driver_set_graphics_mode();
-	 //button_draw(serialListenerButton, 0);
-	 //while (1) {
-		 //if (button_get_status(serialListenerButton, position));
-	 //}
-	 //return 0;
+	 Button serialListenerButton = { "Serial-Listener", 0, 1 };
+	 kernel_touch_bind(process_touch);
+	 disp_driver_set_graphics_mode();
+	 gfx_clear();
+	 button_draw(serialListenerButton, 0);
+	 return 0;
+ }
+ 
+ void process_touch(vector_2 pos) {
+	 if (button_get_status(serialListenerButton, pos)) {
+		 kernel_run("serial_listener");
+	 }
  }

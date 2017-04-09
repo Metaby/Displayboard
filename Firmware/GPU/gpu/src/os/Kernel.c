@@ -7,7 +7,7 @@
 #include "Kernel.h"
 
 void kernel_run() {
-	auto_run = "serial_listener";
+	auto_run = "operating_system";
 	tm_print_byte(program_list_size);
 	tm_print(" programs loaded\n");
 	if (auto_run != NULL) {
@@ -62,6 +62,10 @@ void kernel_timer_bind(void_fnct_void fnct) {
 	kernel_timer_fnct = fnct;
 }
 
+void kernel_touch_bind(void_fnct_vector_2 fnct) {
+	kernel_touch_fnct = fnct;
+}
+
 ISR(TIMER3_OVF_vect)
 {
 	cli();
@@ -70,5 +74,19 @@ ISR(TIMER3_OVF_vect)
 	if (kernel_timer_fnct != NULL) {
 		kernel_timer_fnct();
 	}
+	sei();
+}
+
+ISR(INT2_vect)
+{
+	cli();
+	//TIMSK1 = 0x00;
+	TCNT1H = 0xF6;
+	TCNT1L = 0x3B;
+	vector_2 position = display_get_touch();
+	if (kernel_touch_fnct != NULL) {
+		kernel_touch_fnct(position);
+	}
+	//TIMSK1 = (1 << TOIE1);
 	sei();
 }

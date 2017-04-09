@@ -31,7 +31,10 @@ src/OS/Kernel.d src/OS/Kernel.o: ../src/OS/Kernel.c ../src/OS/Kernel.h \
  ../src/OS/Programs/hello_world.h ../src/OS/Programs/../../Tools/Tools.h \
  ../src/OS/Programs/count_down.h ../src/OS/Programs/gfx_test.h \
  ../src/OS/Programs/../Kernel.h ../src/OS/Programs/serial_listener.h \
- ../src/OS/Programs/operating_system.h
+ ../src/OS/Programs/operating_system.h \
+ ../src/OS/Programs/../../GUI/Button.h \
+ ../src/OS/Programs/../../GUI/../Tools/Tools.h \
+ ../src/OS/Programs/../../GUI/../GraphicsDriver/Display.h
 
 ../src/OS/Kernel.h:
 
@@ -112,3 +115,9 @@ d:\programme\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdl
 ../src/OS/Programs/serial_listener.h:
 
 ../src/OS/Programs/operating_system.h:
+
+../src/OS/Programs/../../GUI/Button.h:
+
+../src/OS/Programs/../../GUI/../Tools/Tools.h:
+
+../src/OS/Programs/../../GUI/../GraphicsDriver/Display.h:

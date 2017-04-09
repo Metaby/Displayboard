@@ -494,10 +494,10 @@ static void buffer_invert(uint8_t X, uint8_t Y, uint8_t Width, uint8_t Height)
 			buffer_set_pixel(x + X, y + Y, (buffer_get_pixel(x + X, y + Y) ? 0 : 1));
 }
 
-static void buffer_draw_button(uint8_t* Text, uint8_t X, uint8_t Y, uint8_t Inverted)
+void buffer_draw_button(uint8_t* Text, uint8_t X, uint8_t Y, uint8_t Inverted)
 {
 	buffer_write_text(Text, ++X, Y);
-	buffer_draw_rectangle(X - 1, (Y * 4), strlen(Text) * 8 + 1, 12, COLOR_BLACK);
+	buffer_draw_rectangle(X - 1, (Y * 4) - 1, (strlen(Text) - 1) * 8, 10, COLOR_BLACK);
 	if (Inverted)
 	{
 		buffer_invert(X, (Y * 4) + 1, strlen(Text) * 8, 11);

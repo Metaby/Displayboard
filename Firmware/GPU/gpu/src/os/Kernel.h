@@ -15,6 +15,7 @@
 #define KF_UART 0
 
 volatile void_fnct_void kernel_timer_fnct;
+volatile void_fnct_vector_2 kernel_touch_fnct;
 volatile uint16_t kernel_timer_count;
 
 volatile uint8_t* auto_run;
@@ -38,5 +39,6 @@ void kernel_timer_set(uint8_t time_in_ms);
 void kernel_timer_enable();
 void kernel_timer_disable();
 void kernel_timer_bind(void_fnct_void fnct);
+void kernel_touch_bind(void_fnct_void fnct);
 
 #endif /* KERNEL_H_ */
