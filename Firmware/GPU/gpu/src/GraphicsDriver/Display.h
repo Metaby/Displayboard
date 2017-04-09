@@ -34,6 +34,7 @@
  void disp_driver_initialize();
  void disp_driver_set_text_mode();
  void disp_driver_set_graphics_mode();
+ void tm_print_byte(uint8_t val);
  void tm_print(uint8_t* str);
  void tm_clear();
  void gfx_clear();

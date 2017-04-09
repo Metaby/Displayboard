@@ -52,6 +52,12 @@ void tm_clear() {
 	}
 }
 
+void tm_print_byte(uint8_t val) {	
+	uint8_t str[10];
+	sprintf(str, "%i", val);
+	tm_print(str);
+}
+
 void tm_print(uint8_t* str) {
 	if (display_driver_mode == GFX_TEXT_MODE) {
 		uint8_t i = 0;

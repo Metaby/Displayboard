@@ -19,7 +19,7 @@ volatile uint16_t kernel_timer_count;
 
 volatile uint8_t* auto_run;
 
-volatile Program program_list[4];
+volatile Program program_list[6];
 volatile uint8_t input[8][20];
 volatile uint8_t inputPos;
 volatile uint8_t inputLength;
@@ -30,7 +30,6 @@ volatile uint8_t lines;
 
 volatile uint8_t last_call_status;
 
-Program kernel_add_program(uint8_t* name, int_fnct_void fnct);
 void kernel_initialize();
 void kernel_run();
 void kernel_handle_uart();

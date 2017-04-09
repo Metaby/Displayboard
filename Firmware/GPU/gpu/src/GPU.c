@@ -21,7 +21,7 @@ ISR(INT2_vect)
 	TIMSK1 = 0x00;
 	TCNT1H = 0xF6;
 	TCNT1L = 0x3B;
-	vector_2 position = display_get_touch();
+	position = display_get_touch();
 	// Touch erkannt
 	TIMSK1 = (1 << TOIE1);
 }

@@ -9,8 +9,8 @@
 uint8_t count_down_fnct() {
 	count = 20;
 	while (count > 0) {
-		//tm_print(uint_to_string(count));
-		tm_print("cd\n");
+		tm_print_byte(count);
+		tm_print("\n");
 		count--;
 		system_sleep_ms(1000);
 	}

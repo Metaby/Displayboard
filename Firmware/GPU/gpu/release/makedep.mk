@@ -26,5 +26,9 @@ src\OS\Programs\gfx_test.c
 
 src\OS\Programs\hello_world.c
 
+src\OS\Programs\operating_system.c
+
+src\OS\Programs\serial_listener.c
+
 src\Tools\Tools.c
 

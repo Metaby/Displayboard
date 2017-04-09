@@ -7,56 +7,34 @@
 #include "Kernel.h"
 
 void kernel_run() {
-	auto_run = "gfx_test";
-	tm_print(uint_to_string(program_list_size));
-	tm_print(uint_to_string(20));
+	auto_run = "serial_listener";
+	tm_print_byte(program_list_size);
 	tm_print(" programs loaded\n");
-	tm_print("listening to RS232\n");
-	uint8_t uart_input[20];
-	uint8_t uart_input_position = 0;
-	for (uint8_t i = 0; i < 20; i++) {
-		uart_input[i] = 0x00;
-	}
 	if (auto_run != NULL) {
 		kernel_execute(auto_run);
 	}
-	while (1) {
-		while (!(UCSR0A & (1 << RXC0)));
-		uint8_t ch = UDR0;
-		if (ch == 0x0A) {
-			kernel_execute(uart_input);
-			uart_input_position = 0;
-			for (uint8_t i = 0; i < 20; i++) {
-				uart_input[i] = 0x00;
-			}
-		} else {
-			uart_input[uart_input_position++] = ch;
-		}
-	};
-}
-
-Program kernel_add_program(uint8_t* name, int_fnct_void fnct) {
-	Program p;
-	p.name = name;
-	p.run = fnct;
+	while (1);
 }
 
 void kernel_initialize() {
 	last_call_status = 0;
-	program_list_size = 4;
-	program_list[0].name = "clear";
-	program_list[0].run = clear_fnct;
+	program_list_size = 5;
+	program_list[0].name = "operating_system";
+	program_list[0].run = operating_system_fnct;
 	program_list[1].name = "hello_world";
 	program_list[1].run = hello_world_fnct;
 	program_list[2].name = "count_down";
 	program_list[2].run = count_down_fnct;
 	program_list[3].name = "gfx_test";
 	program_list[3].run = gfx_test_fnct;
+	program_list[4].name = "serial_listener";
+	program_list[4].run = serial_listener_fnct;
+	program_list[5].name = "clear";
+	program_list[5].run = clear_fnct;
 }
 
 void kernel_execute(uint8_t* command) {
-	tm_print("kernel execution\n");
-	tm_print(" >");
+	tm_print("exec> ");
 	tm_print(command);
 	tm_print("\n");
 	for (uint8_t i = 0; i < program_list_size; i++) {
@@ -94,10 +72,3 @@ ISR(TIMER3_OVF_vect)
 	}
 	sei();
 }
-
-// ISR(USART0_RX_vect)
-// {
-// 	cli();
-// 	KernelFunction(KF_UART);
-// 	sei();
-// }

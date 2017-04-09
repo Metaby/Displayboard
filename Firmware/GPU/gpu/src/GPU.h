@@ -19,6 +19,7 @@
 #include "OS/Program.h"
 
 volatile uint8_t brightness = 31;
+volatile vector_2 position;
 
 void hardware_initialize();
 
