@@ -7,7 +7,7 @@
 #include "Kernel.h"
 
 void kernel_run() {
-	auto_run = "operating_system";
+	auto_run = "roco";
 	tm_print_byte(program_list_size);
 	tm_print(" programs loaded\n");
 	if (auto_run != NULL) {
@@ -18,7 +18,7 @@ void kernel_run() {
 
 void kernel_initialize() {
 	last_call_status = 0;
-	program_list_size = 5;
+	program_list_size = 7;
 	program_list[0].name = "operating_system";
 	program_list[0].run = operating_system_fnct;
 	program_list[1].name = "hello_world";
@@ -31,6 +31,8 @@ void kernel_initialize() {
 	program_list[4].run = serial_listener_fnct;
 	program_list[5].name = "clear";
 	program_list[5].run = clear_fnct;
+	program_list[6].name = "roco";
+	program_list[6].run = robot_control_fnct;
 }
 
 void kernel_execute(uint8_t* command) {

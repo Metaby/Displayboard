@@ -28,6 +28,8 @@ src\OS\Programs\hello_world.c
 
 src\OS\Programs\operating_system.c
 
+src\OS\Programs\robot_control.c
+
 src\OS\Programs\serial_listener.c
 
 src\Tools\Tools.c

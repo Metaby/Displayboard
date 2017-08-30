@@ -13,6 +13,7 @@
 #include "Programs/gfx_test.h"
 #include "Programs/serial_listener.h"
 #include "Programs/operating_system.h"
+#include "Programs/robot_control.h"
 
 typedef struct Program {
 	uint8_t* name;

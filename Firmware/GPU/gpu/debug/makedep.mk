@@ -2,23 +2,23 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
-src\Extern\dallas_one_wire.c
+Extern\dallas_one_wire.c
 
-src\Extern\twimaster.c
+Extern\twimaster.c
 
-src\GPU.c
+GPU.c
 
-src\GraphicsDriver\Display.c
+GraphicsDriver\Display.c
 
-src\GUI\Button.c
+GUI\Button.c
 
-src\GUI\Container.c
+GUI\Container.c
 
-src\GUI\Frame.c
+GUI\Frame.c
 
-src\HAL\HardwareInterface.c
+HAL\HardwareInterface.c
 
-src\RS232.c
+RS232.c
 
-src\Tools\Tools.c
+Tools\Tools.c
 

@@ -20,7 +20,7 @@ volatile uint16_t kernel_timer_count;
 
 volatile uint8_t* auto_run;
 
-volatile Program program_list[6];
+volatile Program program_list[7];
 volatile uint8_t input[8][20];
 volatile uint8_t inputPos;
 volatile uint8_t inputLength;
