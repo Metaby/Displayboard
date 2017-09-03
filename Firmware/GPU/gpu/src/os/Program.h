@@ -8,11 +8,10 @@
 #define PROGRAM_H_
 #include "../Tools/Tools.h"
 #include "Programs/clear.h"
-#include "Programs/hello_world.h"
+#include "Programs/text_test.h"
 #include "Programs/count_down.h"
 #include "Programs/gfx_test.h"
 #include "Programs/serial_listener.h"
-#include "Programs/operating_system.h"
 #include "Programs/robot_control.h"
 
 typedef struct Program {

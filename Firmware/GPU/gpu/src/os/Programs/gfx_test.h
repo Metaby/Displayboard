@@ -13,5 +13,6 @@
 #define GFX_TEST_H_
 
 uint8_t gfx_test_fnct();
+void timer_fnct();
 
 #endif /* GFX_TEST_H_ */

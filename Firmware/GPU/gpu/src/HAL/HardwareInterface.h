@@ -23,6 +23,7 @@ void display_disable();
 void display_send_buffer();
 
 // Touch-Input
-vector_2 display_get_touch();
+vector_2 touch_position;
+void display_get_touch();
 
 #endif

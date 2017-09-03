@@ -95,13 +95,13 @@ void display_send_buffer()
 	}
 }
 
-vector_2 display_get_touch()
+void display_get_touch()
 {	
 	i2c_start_wait(0x0C + TW_WRITE);
 	i2c_write(0x00);
 	i2c_stop();
 	i2c_start_wait(0x0C + TW_READ);
-	vector_2 position = {i2c_readAck(), i2c_readNak()};
+	touch_position.x = i2c_readAck();
+	touch_position.y = i2c_readNak();
 	i2c_stop();
-	return position;
 }

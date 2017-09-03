@@ -7,38 +7,46 @@
 #include "Kernel.h"
 
 void kernel_run() {
-	auto_run = "roco";
-	tm_print_byte(program_list_size);
-	tm_print(" programs loaded\n");
-	if (auto_run != NULL) {
-		kernel_execute(auto_run);
-	}
-	while (1);
+	while (1) {
+		kernel_mode = 1;
+		text_test_button.text = "Text-Test";
+		text_test_button.x = 2;
+		text_test_button.y = 23;
+		serial_listener_button.text = "Serial-Listener";
+		serial_listener_button.x = 2;
+		serial_listener_button.y = 1;
+		gfx_test_button.text = "GFX-Test";
+		gfx_test_button.x = 60;
+		gfx_test_button.y = 23;
+		disp_driver_set_graphics_mode();
+		gfx_clear();
+		button_draw(text_test_button, 0);
+		button_draw(serial_listener_button, 0);
+		button_draw(gfx_test_button, 0);
+		while (kernel_mode) {};
+		kernel_execute(cmd);
+		cmd = "";
+	};
 }
 
 void kernel_initialize() {
 	last_call_status = 0;
-	program_list_size = 7;
-	program_list[0].name = "operating_system";
-	program_list[0].run = operating_system_fnct;
-	program_list[1].name = "hello_world";
-	program_list[1].run = hello_world_fnct;
-	program_list[2].name = "count_down";
-	program_list[2].run = count_down_fnct;
-	program_list[3].name = "gfx_test";
-	program_list[3].run = gfx_test_fnct;
-	program_list[4].name = "serial_listener";
-	program_list[4].run = serial_listener_fnct;
-	program_list[5].name = "clear";
-	program_list[5].run = clear_fnct;
-	program_list[6].name = "roco";
-	program_list[6].run = robot_control_fnct;
+	program_list_size = 6;
+	program_list[0].name = "text_test";
+	program_list[0].run = text_test_fnct;
+	program_list[1].name = "count_down";
+	program_list[1].run = count_down_fnct;
+	program_list[2].name = "gfx_test";
+	program_list[2].run = gfx_test_fnct;
+	program_list[3].name = "serial_listener";
+	program_list[3].run = serial_listener_fnct;
+	program_list[4].name = "clear";
+	program_list[4].run = clear_fnct;
+	program_list[5].name = "robot_control";
+	program_list[5].run = robot_control_fnct;
 }
 
 void kernel_execute(uint8_t* command) {
-	tm_print("exec> ");
-	tm_print(command);
-	tm_print("\n");
 	for (uint8_t i = 0; i < program_list_size; i++) {
 		if (string_equals(command, program_list[i].name)) {
 			last_call_status = program_list[i].run();
@@ -82,13 +90,26 @@ ISR(TIMER3_OVF_vect)
 ISR(INT2_vect)
 {
 	cli();
-	//TIMSK1 = 0x00;
 	TCNT1H = 0xF6;
 	TCNT1L = 0x3B;
-	vector_2 position = display_get_touch();
-	if (kernel_touch_fnct != NULL) {
-		kernel_touch_fnct(position);
+	display_get_touch();
+	if (kernel_mode) {
+		if (button_get_status(text_test_button, touch_position)) {
+			cmd = "text_test";
+			kernel_mode = 0;
+		}
+		if (button_get_status(serial_listener_button, touch_position)) {
+			cmd = "serial_listener";
+			kernel_mode = 0;
+		}
+		if (button_get_status(gfx_test_button, touch_position)) {
+			cmd = "gfx_test";
+			kernel_mode = 0;
+		}
+	} else {
+		if (kernel_touch_fnct != NULL) {
+			kernel_touch_fnct(touch_position);
+		}
 	}
-	//TIMSK1 = (1 << TOIE1);
 	sei();
 }

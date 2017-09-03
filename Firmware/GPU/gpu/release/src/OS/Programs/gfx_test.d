@@ -29,20 +29,18 @@ src/OS/Programs/gfx_test.d src/OS/Programs/gfx_test.o: \
  ../src/OS/Programs/../../GraphicsDriver/../HAL/../Tools/../Extern/dallas_one_wire.h \
  ../src/OS/Programs/../../GraphicsDriver/../Tools/Tools.h \
  ../src/OS/Programs/../../Tools/Tools.h ../src/OS/Programs/../Kernel.h \
- ../src/HAL/HardwareInterface.h ../src/OS/Programs/../Program.h \
+ ../src/HAL/HardwareInterface.h ../src/GraphicsDriver/Display.h \
+ ../src/GUI/Button.h ../src/GUI/../Tools/Tools.h \
+ ../src/GUI/../GraphicsDriver/Display.h ../src/OS/Programs/../Program.h \
  ../src/OS/Programs/../../Tools/Tools.h \
  ../src/OS/Programs/../Programs/clear.h \
  ../src/OS/Programs/../Programs/../../GraphicsDriver/Display.h \
- ../src/OS/Programs/../Programs/hello_world.h \
+ ../src/OS/Programs/../Programs/text_test.h \
  ../src/OS/Programs/../Programs/../../Tools/Tools.h \
  ../src/OS/Programs/../Programs/count_down.h \
  ../src/OS/Programs/../Programs/gfx_test.h \
  ../src/OS/Programs/../Programs/../Kernel.h \
  ../src/OS/Programs/../Programs/serial_listener.h \
- ../src/OS/Programs/../Programs/operating_system.h \
- ../src/OS/Programs/../Programs/../../GUI/Button.h \
- ../src/OS/Programs/../Programs/../../GUI/../Tools/Tools.h \
- ../src/OS/Programs/../Programs/../../GUI/../GraphicsDriver/Display.h \
  ../src/OS/Programs/../Programs/robot_control.h
 
 ../src/OS/Programs/gfx_test.h:
@@ -109,6 +107,14 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 
 ../src/HAL/HardwareInterface.h:
 
+../src/GraphicsDriver/Display.h:
+
+../src/GUI/Button.h:
+
+../src/GUI/../Tools/Tools.h:
+
+../src/GUI/../GraphicsDriver/Display.h:
+
 ../src/OS/Programs/../Program.h:
 
 ../src/OS/Programs/../../Tools/Tools.h:
@@ -117,7 +123,7 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 
 ../src/OS/Programs/../Programs/../../GraphicsDriver/Display.h:
 
-../src/OS/Programs/../Programs/hello_world.h:
+../src/OS/Programs/../Programs/text_test.h:
 
 ../src/OS/Programs/../Programs/../../Tools/Tools.h:
 
@@ -128,13 +134,5 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 ../src/OS/Programs/../Programs/../Kernel.h:
 
 ../src/OS/Programs/../Programs/serial_listener.h:
-
-../src/OS/Programs/../Programs/operating_system.h:
-
-../src/OS/Programs/../Programs/../../GUI/Button.h:
-
-../src/OS/Programs/../Programs/../../GUI/../Tools/Tools.h:
-
-../src/OS/Programs/../Programs/../../GUI/../GraphicsDriver/Display.h:
 
 ../src/OS/Programs/../Programs/robot_control.h:

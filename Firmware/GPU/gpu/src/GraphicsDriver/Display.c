@@ -23,7 +23,6 @@ void disp_driver_initialize() {
 	display_initialize();
 	display_clear();
 	buffer_clear();
-	//buffer_write_text(uint_to_string(1), 120, 15);
 }
 
 void disp_driver_set_text_mode() {
@@ -152,7 +151,7 @@ static void buffer_write_text(uint8_t Text[], uint8_t X, uint8_t Y)
 	for (uint8_t i = 0; i < strLn; i++)
 	{
 		buffer_write_char(Text[i], X, Y);
-		X += 7;	
+		X += 6;	
 	}
 }
 
@@ -496,11 +495,11 @@ static void buffer_invert(uint8_t X, uint8_t Y, uint8_t Width, uint8_t Height)
 
 void buffer_draw_button(uint8_t* Text, uint8_t X, uint8_t Y, uint8_t Inverted)
 {
-	buffer_write_text(Text, ++X, Y);
-	buffer_draw_rectangle(X - 1, (Y * 4) - 1, (strlen(Text) - 1) * 8, 10, COLOR_BLACK);
+	buffer_write_text(Text, X + 2, Y);
+	buffer_draw_rectangle(X, (Y * 4) - 2, strlen(Text) * 6 + 2, 10, COLOR_BLACK);
 	if (Inverted)
 	{
-		buffer_invert(X, (Y * 4) + 1, strlen(Text) * 8, 11);
+		buffer_invert(X, (Y * 4) - 2, strlen(Text) * 6 + 2, 10);
 	}
 }
 

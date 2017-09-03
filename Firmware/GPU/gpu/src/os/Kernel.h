@@ -10,6 +10,8 @@
 #include <avr/interrupt.h>
 #include <string.h>
 #include "HAL/HardwareInterface.h"
+#include "GraphicsDriver/Display.h"
+#include "GUI/Button.h"
 #include "Program.h"
 
 #define KF_UART 0
@@ -20,7 +22,7 @@ volatile uint16_t kernel_timer_count;
 
 volatile uint8_t* auto_run;
 
-volatile Program program_list[7];
+volatile Program program_list[6];
 volatile uint8_t input[8][20];
 volatile uint8_t inputPos;
 volatile uint8_t inputLength;
@@ -30,6 +32,12 @@ volatile uint8_t linePos;
 volatile uint8_t lines;
 
 volatile uint8_t last_call_status;
+
+volatile uint8_t* cmd;
+volatile uint8_t kernel_mode;
+volatile Button serial_listener_button;
+volatile Button text_test_button;
+volatile Button gfx_test_button;
 
 void kernel_initialize();
 void kernel_run();

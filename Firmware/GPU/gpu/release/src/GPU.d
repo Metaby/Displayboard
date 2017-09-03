@@ -29,15 +29,14 @@ src/GPU.d src/GPU.o: ../src/GPU.c ../src/GPU.h \
  ../src/GraphicsDriver/../Tools/Tools.h ../src/Tools/Tools.h \
  ../src/GUI/Button.h ../src/GUI/../Tools/Tools.h \
  ../src/GUI/../GraphicsDriver/Display.h ../src/HAL/HardwareInterface.h \
- ../src/OS/Kernel.h ../src/HAL/HardwareInterface.h ../src/OS/Program.h \
+ ../src/OS/Kernel.h ../src/HAL/HardwareInterface.h \
+ ../src/GraphicsDriver/Display.h ../src/GUI/Button.h ../src/OS/Program.h \
  ../src/OS/../Tools/Tools.h ../src/OS/Programs/clear.h \
  ../src/OS/Programs/../../GraphicsDriver/Display.h \
- ../src/OS/Programs/hello_world.h ../src/OS/Programs/../../Tools/Tools.h \
+ ../src/OS/Programs/text_test.h ../src/OS/Programs/../../Tools/Tools.h \
  ../src/OS/Programs/count_down.h ../src/OS/Programs/gfx_test.h \
  ../src/OS/Programs/../Kernel.h ../src/OS/Programs/serial_listener.h \
- ../src/OS/Programs/operating_system.h \
- ../src/OS/Programs/../../GUI/Button.h ../src/OS/Programs/robot_control.h \
- ../src/OS/Program.h
+ ../src/OS/Programs/robot_control.h ../src/OS/Program.h
 
 ../src/GPU.h:
 
@@ -113,6 +112,10 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\
 
 ../src/HAL/HardwareInterface.h:
 
+../src/GraphicsDriver/Display.h:
+
+../src/GUI/Button.h:
+
 ../src/OS/Program.h:
 
 ../src/OS/../Tools/Tools.h:
@@ -121,7 +124,7 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\
 
 ../src/OS/Programs/../../GraphicsDriver/Display.h:
 
-../src/OS/Programs/hello_world.h:
+../src/OS/Programs/text_test.h:
 
 ../src/OS/Programs/../../Tools/Tools.h:
 
@@ -132,10 +135,6 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\
 ../src/OS/Programs/../Kernel.h:
 
 ../src/OS/Programs/serial_listener.h:
-
-../src/OS/Programs/operating_system.h:
-
-../src/OS/Programs/../../GUI/Button.h:
 
 ../src/OS/Programs/robot_control.h:
 

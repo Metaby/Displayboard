@@ -25,16 +25,14 @@ src/OS/Kernel.d src/OS/Kernel.o: ../src/OS/Kernel.c ../src/OS/Kernel.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdarg.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdlib.h \
  ../src/HAL/../GraphicsDriver/../Tools/../Extern/dallas_one_wire.h \
- ../src/HAL/../Tools/Tools.h ../src/OS/Program.h \
+ ../src/HAL/../Tools/Tools.h ../src/GraphicsDriver/Display.h \
+ ../src/GUI/Button.h ../src/GUI/../Tools/Tools.h \
+ ../src/GUI/../GraphicsDriver/Display.h ../src/OS/Program.h \
  ../src/OS/../Tools/Tools.h ../src/OS/Programs/clear.h \
  ../src/OS/Programs/../../GraphicsDriver/Display.h \
- ../src/OS/Programs/hello_world.h ../src/OS/Programs/../../Tools/Tools.h \
+ ../src/OS/Programs/text_test.h ../src/OS/Programs/../../Tools/Tools.h \
  ../src/OS/Programs/count_down.h ../src/OS/Programs/gfx_test.h \
  ../src/OS/Programs/../Kernel.h ../src/OS/Programs/serial_listener.h \
- ../src/OS/Programs/operating_system.h \
- ../src/OS/Programs/../../GUI/Button.h \
- ../src/OS/Programs/../../GUI/../Tools/Tools.h \
- ../src/OS/Programs/../../GUI/../GraphicsDriver/Display.h \
  ../src/OS/Programs/robot_control.h
 
 ../src/OS/Kernel.h:
@@ -95,6 +93,14 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 
 ../src/HAL/../Tools/Tools.h:
 
+../src/GraphicsDriver/Display.h:
+
+../src/GUI/Button.h:
+
+../src/GUI/../Tools/Tools.h:
+
+../src/GUI/../GraphicsDriver/Display.h:
+
 ../src/OS/Program.h:
 
 ../src/OS/../Tools/Tools.h:
@@ -103,7 +109,7 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 
 ../src/OS/Programs/../../GraphicsDriver/Display.h:
 
-../src/OS/Programs/hello_world.h:
+../src/OS/Programs/text_test.h:
 
 ../src/OS/Programs/../../Tools/Tools.h:
 
@@ -114,13 +120,5 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 ../src/OS/Programs/../Kernel.h:
 
 ../src/OS/Programs/serial_listener.h:
-
-../src/OS/Programs/operating_system.h:
-
-../src/OS/Programs/../../GUI/Button.h:
-
-../src/OS/Programs/../../GUI/../Tools/Tools.h:
-
-../src/OS/Programs/../../GUI/../GraphicsDriver/Display.h:
 
 ../src/OS/Programs/robot_control.h:

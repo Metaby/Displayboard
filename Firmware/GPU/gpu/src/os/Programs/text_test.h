@@ -1,5 +1,5 @@
 /*
- * hello_world.h
+ * text_test.h
  *
  * Created: 01.02.2016 00:06:11
  *  Author: Max
@@ -8,9 +8,9 @@
 #include "../../GraphicsDriver/Display.h"
 #include "../../Tools/Tools.h"
 
-#ifndef HELLO_WORLD_H_
-#define HELLO_WORLD_H_
+#ifndef TEXT_TEST_H_
+#define TEXT_TEST_H_
 
-uint8_t hello_world_fnct();
+uint8_t text_test_fnct();
 
-#endif /* HELLO_WORLD_H_ */
+#endif /* TEXT_TEST_H_ */

@@ -259,16 +259,10 @@
     <Compile Include="src\OS\Programs\gfx_test.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="src\OS\Programs\hello_world.c">
+    <Compile Include="src\OS\Programs\text_test.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="src\OS\Programs\hello_world.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\OS\Programs\operating_system.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\OS\Programs\operating_system.h">
+    <Compile Include="src\OS\Programs\text_test.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\OS\Programs\robot_control.c">

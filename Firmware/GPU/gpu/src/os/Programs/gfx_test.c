@@ -44,6 +44,7 @@ void timer_fnct() {
 
 uint8_t gfx_test_fnct() {
 	disp_driver_set_graphics_mode();
+	gfx_clear();
 	center.x = 80;
 	center.y = 52;
 	dir = 1;
@@ -51,5 +52,6 @@ uint8_t gfx_test_fnct() {
 	kernel_timer_set(150);
 	kernel_timer_bind(timer_fnct);
 	kernel_timer_enable();
+	while (1);
 	return 0;
 }

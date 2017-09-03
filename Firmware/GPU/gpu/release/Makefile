@@ -56,8 +56,7 @@ C_SRCS +=  \
 ../src/OS/Programs/clear.c \
 ../src/OS/Programs/count_down.c \
 ../src/OS/Programs/gfx_test.c \
-../src/OS/Programs/hello_world.c \
-../src/OS/Programs/operating_system.c \
+../src/OS/Programs/text_test.c \
 ../src/OS/Programs/robot_control.c \
 ../src/OS/Programs/serial_listener.c \
 ../src/Tools/Tools.c
@@ -81,8 +80,7 @@ src/OS/Program.o \
 src/OS/Programs/clear.o \
 src/OS/Programs/count_down.o \
 src/OS/Programs/gfx_test.o \
-src/OS/Programs/hello_world.o \
-src/OS/Programs/operating_system.o \
+src/OS/Programs/text_test.o \
 src/OS/Programs/robot_control.o \
 src/OS/Programs/serial_listener.o \
 src/Tools/Tools.o
@@ -99,8 +97,7 @@ src/OS/Program.o \
 src/OS/Programs/clear.o \
 src/OS/Programs/count_down.o \
 src/OS/Programs/gfx_test.o \
-src/OS/Programs/hello_world.o \
-src/OS/Programs/operating_system.o \
+src/OS/Programs/text_test.o \
 src/OS/Programs/robot_control.o \
 src/OS/Programs/serial_listener.o \
 src/Tools/Tools.o
@@ -117,8 +114,7 @@ src/OS/Program.d \
 src/OS/Programs/clear.d \
 src/OS/Programs/count_down.d \
 src/OS/Programs/gfx_test.d \
-src/OS/Programs/hello_world.d \
-src/OS/Programs/operating_system.d \
+src/OS/Programs/text_test.d \
 src/OS/Programs/robot_control.d \
 src/OS/Programs/serial_listener.d \
 src/Tools/Tools.d
@@ -135,8 +131,7 @@ src/OS/Program.d \
 src/OS/Programs/clear.d \
 src/OS/Programs/count_down.d \
 src/OS/Programs/gfx_test.d \
-src/OS/Programs/hello_world.d \
-src/OS/Programs/operating_system.d \
+src/OS/Programs/text_test.d \
 src/OS/Programs/robot_control.d \
 src/OS/Programs/serial_listener.d \
 src/Tools/Tools.d
@@ -155,8 +150,6 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
-
-
 
 
 

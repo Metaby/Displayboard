@@ -24,9 +24,7 @@ src\OS\Programs\count_down.c
 
 src\OS\Programs\gfx_test.c
 
-src\OS\Programs\hello_world.c
-
-src\OS\Programs\operating_system.c
+src\OS\Programs\text_test.c
 
 src\OS\Programs\robot_control.c
 

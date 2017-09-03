@@ -11,8 +11,6 @@ int main(void)
 	hardware_initialize();
 	disp_driver_initialize();
 	kernel_initialize();
-	tm_print("initializing done\n");
-	tm_print("starting kernel\n");
 	kernel_run();
 }
 
